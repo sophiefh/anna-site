@@ -1,0 +1,270 @@
+/* global resets */
+* {
+  border: 0;
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+html {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f6f7f8;
+  color: #16171a;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* header */
+.header {
+  background-color: #f2f2f2;
+}
+
+.header-container {
+  width: 80%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* jumbotron */
+.jumbotron {
+  position: relative;
+}
+
+@media (min-width: 1400px) {
+  .jumbotron {
+    width: 80%;
+    max-width: 1400px;
+    min-height: 50vh;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .jumbotron {
+    background: #1b1f23;
+  }
+}
+
+.jumbotron-image {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.jumbotron-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+}
+
+@media (min-width: 600px) {
+  .jumbotron-content {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+  }
+}
+
+.jumbotron-headline {
+  line-height: 1.05;
+  font-size: 64px;
+  font-weight: 900;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .jumbotron-headline {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 800px) {
+  .jumbotron-headline {
+    font-size: 48px;
+    line-height: 1.2;
+  }
+}
+
+.jumbotron-button {
+  user-select: 'none';
+  appearance: none;
+  display: inline-block;
+  width: auto;
+  padding: 13.33333px 20px;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: solid 4px #0366d6;
+  border-radius: 0;
+  font-size: 22.4px;
+  letter-spacing: 0.025em;
+  font-weight: 800;
+  background-color: #fff;
+  color: #0366d6;
+  cursor: pointer;
+  transition: background-color 160ms ease-in-out;
+  position: relative;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transition: background-color 0.3s, left 0.3s;
+  background-color: transparent;
+  border-color: #f9c513;
+  color: #fff;
+}
+
+/* promo */
+.promo {
+  width: 80%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center, right center;
+  background-color: #1b1f23;
+  background-image: url(/img/dot.png), url(/img/right.png);
+  color: #fff;
+}
+
+.promo-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 800px) {
+  .promo-content {
+    width: 47.5%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .promo-content {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 500px) {
+  .promo-content {
+    padding: 50px;
+  }
+}
+
+.promo-content > p {
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .promo-content > p {
+    font-size: 24px;
+  }
+}
+
+/* collection */
+.collection {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.collection:nth-of-type(odd) {
+  box-shadow: 0 18px 30px rgba(177, 183, 183, 0.07);
+}
+
+.collection-container {
+  width: 80%;
+  max-width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.collection-title {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.collection-products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-thumbmail {
+  position: relative;
+  width: 100%;
+  margin-bottom: 40px;
+  transition: all 100ms ease-in-out;
+  text-align: center;
+}
+
+@media (min-width: 544px) {
+  .product-thumbnail {
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .product-thumbnail {
+    width: calc(20% - 32px);
+  }
+}
+
+.product-image {
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  margin-bottom: 5px;
+}
+
+.product-title {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 5px 0 0 0;
+}
